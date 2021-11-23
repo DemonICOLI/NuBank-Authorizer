@@ -38,6 +38,8 @@ npm install
 npm run coverage
 ```
 
+Should be excecuted in authorizer folder
+
 ## Posible Improvements
 
 - Real Repository for Historical Transactions / Multiple Accounts
