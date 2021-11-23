@@ -15,9 +15,19 @@ export class AuthorizerCLIController implements AuthorizerController {
 			output: process.stdout,
 			terminal: false,
 		});
-
+		const operations: any[] = [];
 		readLine.on("line", (line) => {
-			this.service.processOperation(JSON.parse(line)).then((response) => console.log(response));
+			operations.push(JSON.parse(line));
 		});
+
+		readLine.on("close", async () => {
+			await this.processOperations(operations);
+		});
+	}
+
+	private async processOperations(operations: any[]) {
+		for (const operation of operations) {
+			console.log(await this.service.processOperation(operation));
+		}
 	}
 }

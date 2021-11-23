@@ -12,20 +12,11 @@
   "subPackages": [
     "authorizer"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DemonICOLI/NuBank-Authorizer.git"
-  },
   "devDependencies": {
     "subpackage": "^1.1.0"
   },
   "keywords": [
     "NuBank"
   ],
-  "author": "Javier Quinones",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DemonICOLI/NuBank-Authorizer/issues"
-  },
-  "homepage": "https://github.com/DemonICOLI/NuBank-Authorizer#readme"
+  "license": "ISC"
 }
