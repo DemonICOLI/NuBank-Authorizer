@@ -36,6 +36,7 @@ npm run build
 ```sh
 npm install
 npm run coverage
+```
 
 ## Posible Improvements
 
