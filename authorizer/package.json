@@ -16,7 +16,6 @@
     "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json",
     "zip": "cd dist/ && bestzip  ../Authorizer.zip *"
   },
-  "author": "Javier Quiñones",
   "license": "ISC",
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
