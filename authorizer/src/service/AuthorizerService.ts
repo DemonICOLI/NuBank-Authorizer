@@ -58,7 +58,7 @@ export class AuthorizerService {
 		let validationPromises = [
 			this.validateAccountCardActive(account),
 			this.validateAccountBalanceForTransaction(account, transaction),
-			this.validateHighFrequencySmallInterval(),
+			this.validateHighFrequencySmallInterval(transaction),
 			this.validateDoubledTransaction(transaction),
 		];
 		// @ts-ignore
@@ -73,8 +73,9 @@ export class AuthorizerService {
 		return account["available-limit"] - transaction.amount >= 0 ? undefined : ERROR_MESSAGES.INSUFFICIENT_LIMIT;
 	}
 
-	private async validateHighFrequencySmallInterval() {
+	private async validateHighFrequencySmallInterval(transaction: Transaction) {
 		const numberOfTransactionsInLastMinutes = this.accountRepository.getNumberOfTransactionsInLastMinutes(
+			transaction.time,
 			CONSTANTS.SMALL_INTERVAL
 		);
 		return numberOfTransactionsInLastMinutes < CONSTANTS.MAX_NUMBER_OF_TRANSACTIONS_IN_SMALL_INTERVAL

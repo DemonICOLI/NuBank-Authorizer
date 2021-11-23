@@ -10,6 +10,7 @@ export const ERROR_MESSAGES = {
 export const TYPES = {
 	AccountRepository: Symbol.for("AccountRepository"),
 	AuthorizerPresenter: Symbol.for("AuthorizerPresenter"),
+	DateProvider: Symbol.for("DateProvider"),
 };
 
 export const CONSTANTS = {
