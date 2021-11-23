@@ -98,7 +98,7 @@ describe("AuthorizerService Test Suite", () => {
 			createAccount(account: Account) {
 				return account;
 			},
-			getNumberOfTransactionsInLastMinutes(lastMinutes: number) {
+			getNumberOfTransactionsInLastMinutes(transactionTime: string, intervalInMinutes: number) {
 				return 0;
 			},
 			hasTransactionOccurredInLastMinutes(transaction: Transaction, intervalInMinutes: number) {
@@ -133,7 +133,7 @@ describe("AuthorizerService Test Suite", () => {
 			createAccount(account: Account) {
 				return account;
 			},
-			getNumberOfTransactionsInLastMinutes(lastMinutes: number) {
+			getNumberOfTransactionsInLastMinutes(transactionTime: string, intervalInMinutes: number) {
 				return 0;
 			},
 			hasTransactionOccurredInLastMinutes(transaction: Transaction, intervalInMinutes: number) {
@@ -168,7 +168,7 @@ describe("AuthorizerService Test Suite", () => {
 			createAccount(account: Account) {
 				return account;
 			},
-			getNumberOfTransactionsInLastMinutes(lastMinutes: number) {
+			getNumberOfTransactionsInLastMinutes(transactionTime: string, intervalInMinutes: number) {
 				return CONSTANTS.MAX_NUMBER_OF_TRANSACTIONS_IN_SMALL_INTERVAL;
 			},
 			hasTransactionOccurredInLastMinutes(transaction: Transaction, intervalInMinutes: number) {
@@ -203,7 +203,7 @@ describe("AuthorizerService Test Suite", () => {
 			createAccount(account: Account) {
 				return account;
 			},
-			getNumberOfTransactionsInLastMinutes(lastMinutes: number) {
+			getNumberOfTransactionsInLastMinutes(transactionTime: string, intervalInMinutes: number) {
 				return 1;
 			},
 			hasTransactionOccurredInLastMinutes(transaction: Transaction, intervalInMinutes: number) {
@@ -244,7 +244,7 @@ describe("AuthorizerService Test Suite", () => {
 			createAccount(account: Account) {
 				return account;
 			},
-			getNumberOfTransactionsInLastMinutes(lastMinutes: number) {
+			getNumberOfTransactionsInLastMinutes(transactionTime: string, intervalInMinutes: number) {
 				return 1;
 			},
 			hasTransactionOccurredInLastMinutes(transaction: Transaction, intervalInMinutes: number) {
