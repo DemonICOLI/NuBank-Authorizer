@@ -8,9 +8,10 @@ import { OperationResponse } from "../model/OperationResponse";
 import { TransactionOperation } from "../model/TransactionOperation";
 import { AuthorizerPresenter } from "../presenter/AuthorizerPresenter";
 import { Transaction } from "../model/Transaction";
+import { IAuthorizerService } from "./IAuthorizerService";
 
 @injectable()
-export class AuthorizerService {
+export class AuthorizerService implements IAuthorizerService {
 	constructor(
 		@inject(TYPES.AccountRepository) private accountRepository: AccountRepository,
 		@inject(TYPES.AuthorizerPresenter) private presenter: AuthorizerPresenter

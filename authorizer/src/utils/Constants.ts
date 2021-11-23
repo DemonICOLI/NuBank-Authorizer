@@ -11,6 +11,8 @@ export const TYPES = {
 	AccountRepository: Symbol.for("AccountRepository"),
 	AuthorizerPresenter: Symbol.for("AuthorizerPresenter"),
 	DateProvider: Symbol.for("DateProvider"),
+	AuthorizerService: Symbol.for("AuthorizerService"),
+	AuthorizerController: Symbol.for("AuthorizerController"),
 };
 
 export const CONSTANTS = {
